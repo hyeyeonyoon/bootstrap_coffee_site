@@ -1,0 +1,34 @@
+@charset "utf-8";
+#main_banner nav .resBtn{display: none;}
+#main_banner nav ul li:last-child{display: none;}
+
+@media (max-width:1199px){}
+
+@media (max-width:991px){
+    #main_banner nav ul li{margin: 0 12px;}
+    #main_banner nav ul li:nth-child(3){margin-right: 100px;}
+    #main_banner nav ul li:nth-child(4){margin-left: 100px;}
+}
+@media (max-width:767px){
+    #main_banner nav .logo{position: absolute; left:15px; transform:translate(0, -50%);}
+
+    #main_banner nav .resBtn{display: block; position: absolute; top:50%; right:20px; transform: translateY(-50%);}
+    #main_banner nav .resBtn img{display: block; height: 40px; cursor: pointer; filter:invert(100%);}
+
+    #main_banner nav ul{position: fixed; width: 240px; height: 100%; background-color: #fec; top: 0; right: -240px; display: block; padding: 60px 25px; z-index: 9;}
+
+    #main_banner nav ul.active{right: 0; transition: right 0.5s;}
+
+    #main_banner nav ul li{margin: 0; width: 100%; display: block; text-align: left;}
+    #main_banner nav ul li:nth-child(3){margin: 0;}
+    #main_banner nav ul li:nth-child(4){margin: 0;}
+    #main_banner nav ul li a{width: 100%; padding: 10px 0; line-height: 40px; font-weight: bold; color:#333; border-bottom: 1px solid #ccc;}
+    #main_banner nav ul li:last-child{position: absolute; top:15px; right:15px; display: block; width: auto;}
+    #main_banner nav ul li:last-child img{display: block; height: 30px; filter:invert(75%); cursor: pointer;}
+
+    #main_banner nav ul li:hover a{color:#333;}
+    #main_banner nav ul li a:after{display: none;}
+
+    .dark{position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: -1; opacity: 0;}
+    .dark.active{z-index: 8; opacity: 1; transition: opacity 0.5s;}
+}
